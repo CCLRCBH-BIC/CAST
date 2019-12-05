@@ -1,0 +1,275 @@
+2019-9-23 19:31:55.67: =============================== logger created =======================================
+2019-9-23 19:31:55.68: 
+2019-9-23 19:31:55.68: ======================== Starting new session ============================
+2019-9-23 19:31:55.68: Command line arguments given: 
+Namespace(device='cpu', model_cfg='./example_sevenT_magdeburg_beta1t2_sub000/configFiles/deepMedic/model/modelConfig.cfg', reset_trainer=False, saved_model='./example_sevenT_magdeburg_beta1t2_sub000/output/saved_models/trainSessionDm/deepMedic.trainSessionDm.final.2019-09-19.22.49.52.722093.model.ckpt', test_cfg='./example_sevenT_magdeburg_beta1t2_sub000/configFiles/deepMedic/test/testConfig.cfg', train_cfg=None)
+2019-9-23 19:32:1.85: Available devices to Tensorflow:
+[name: "/device:CPU:0"
+device_type: "CPU"
+memory_limit: 268435456
+locality {
+}
+incarnation: 16812404068421574661
+, name: "/device:GPU:0"
+device_type: "GPU"
+memory_limit: 4045778124
+locality {
+  bus_id: 1
+  links {
+  }
+}
+incarnation: 7143118099907945456
+physical_device_desc: "device: 0, name: Quadro P2000, pci bus id: 0000:b3:00.0, compute capability: 6.1"
+]
+2019-9-23 19:32:1.85: CONFIG: The configuration file for the [model] given is: E:\ashs_atlas_umcutrecht_7t_20170810\deepmedic\example_sevenT_magdeburg_beta1t2_sub000\configFiles\deepMedic\model\modelConfig.cfg
+2019-9-23 19:32:1.85: =============================================================
+2019-9-23 19:32:1.86: ========== PARAMETERS FOR MAKING THE ARCHITECTURE ===========
+2019-9-23 19:32:1.86: =============================================================
+2019-9-23 19:32:1.86: CNN model's name = deepMedic
+2019-9-23 19:32:1.86: ~~~~~~~~~~~~~~~~~~Model parameters~~~~~~~~~~~~~~~~
+2019-9-23 19:32:1.87: Number of Classes (including background) = 12
+2019-9-23 19:32:1.87: ~~Normal Pathway~~
+2019-9-23 19:32:1.87: Number of Input Channels = 1
+2019-9-23 19:32:1.88: Number of Layers = 8
+2019-9-23 19:32:1.88: Number of Feature Maps per layer = [30, 30, 40, 40, 40, 40, 50, 50]
+2019-9-23 19:32:1.88: Kernel Dimensions per layer = [[3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3]]
+2019-9-23 19:32:1.88: Receptive Field = [17, 17, 17]
+2019-9-23 19:32:1.89: Residual connections added at the output of layers (indices from 0) = [3, 5, 7]
+2019-9-23 19:32:1.89: Layers that will be made of Lower Rank (indices from 0) = [2, 4, 6]
+2019-9-23 19:32:1.89: Lower Rank layers will be made of rank = [2, 2, 2]
+2019-9-23 19:32:1.90: ~~Subsampled Pathway~~
+2019-9-23 19:32:1.90: Use subsampled Pathway = True
+2019-9-23 19:32:1.90: Number of subsampled pathways that will be built = 2
+2019-9-23 19:32:1.91: Number of Layers (per sub-pathway) = [8, 8]
+2019-9-23 19:32:1.91: Number of Feature Maps per layer (per sub-pathway) = [[30, 30, 40, 40, 40, 40, 50, 50], [30, 30, 40, 40, 40, 40, 50, 50]]
+2019-9-23 19:32:1.91: Kernel Dimensions per layer = [[3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3]]
+2019-9-23 19:32:1.91: Receptive Field = [17, 17, 17]
+2019-9-23 19:32:1.92: Subsampling Factor per dimension (per sub-pathway) = [[3, 3, 3], [5, 5, 5]]
+2019-9-23 19:32:1.92: Residual connections added at the output of layers (indices from 0) = [3, 5, 7]
+2019-9-23 19:32:1.92: Layers that will be made of Lower Rank (indices from 0) = [2, 4, 6]
+2019-9-23 19:32:1.93: Lower Rank layers will be made of rank = [2, 2, 2]
+2019-9-23 19:32:1.93: ~~Fully Connected Pathway~~
+2019-9-23 19:32:1.93: Number of additional FC layers (Excluding the Classif. Layer) = 2
+2019-9-23 19:32:1.94: Number of Feature Maps in the additional FC layers = [250, 250]
+2019-9-23 19:32:1.94: Residual connections added at the output of layers (indices from 0) = [1]
+2019-9-23 19:32:1.94: Layers that will be made of Lower Rank (indices from 0) = []
+2019-9-23 19:32:1.95: Dimensions of Kernels in the 1st FC layer (Classif. layer if no hidden FCs used) = [3, 3, 3]
+2019-9-23 19:32:1.95: ~~Size Of Image Segments~~
+2019-9-23 19:32:1.95: Size of Segments for Training = [37, 37, 37]
+2019-9-23 19:32:1.95: Size of Segments for Validation = [21, 21, 21]
+2019-9-23 19:32:1.96: Size of Segments for Testing = [45, 45, 45]
+2019-9-23 19:32:1.96: ~~Batch Sizes~~
+2019-9-23 19:32:1.96: Batch Size for Training = 5
+2019-9-23 19:32:1.97: Batch Size for Validation = 48
+2019-9-23 19:32:1.97: Batch Size for Testing = 10
+2019-9-23 19:32:1.97: ~~Dropout Rates~~
+2019-9-23 19:32:1.98: Drop.R. for each layer in Normal Pathway = [0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+2019-9-23 19:32:1.98: Drop.R. for each layer in Subsampled Pathway = [0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+2019-9-23 19:32:1.98: Drop.R. for each layer in FC Pathway (additional FC layers + Classific.Layer at end) = [0.0, 0.5, 0.5]
+2019-9-23 19:32:1.99: ~~Weight Initialization~~
+2019-9-23 19:32:1.99: Initialization method and params for the conv kernel weights = ['fanIn', 2]
+2019-9-23 19:32:1.99: ~~Activation Function~~
+2019-9-23 19:32:2.00: Activation function to use = prelu
+2019-9-23 19:32:2.00: ~~Batch Normalization~~
+2019-9-23 19:32:2.00: Apply BN straight on pathways' inputs (eg straight on segments) = [False, False, True]
+2019-9-23 19:32:2.00: Batch Normalization uses a rolling average for inference, over this many batches = 60
+2019-9-23 19:32:2.01: ========== Done with printing session's parameters ==========
+2019-9-23 19:32:2.01: =============================================================
+2019-9-23 19:32:2.01: CONFIG: The configuration file for the [session] was loaded from: E:\ashs_atlas_umcutrecht_7t_20170810\deepmedic\example_sevenT_magdeburg_beta1t2_sub000\configFiles\deepMedic\test\testConfig.cfg
+2019-9-23 19:32:2.02: 
+2019-9-23 19:32:2.03: ============     NEW TESTING SESSION    ===============
+2019-9-23 19:32:2.03: 
+2019-9-23 19:32:2.03: =============================================================
+2019-9-23 19:32:2.04: =========== PARAMETERS OF THIS TESTING SESSION ==============
+2019-9-23 19:32:2.04: =============================================================
+2019-9-23 19:32:2.04: sessionName = testSessionDm
+2019-9-23 19:32:2.05: Model will be loaded from save = E:\ashs_atlas_umcutrecht_7t_20170810\deepmedic\example_sevenT_magdeburg_beta1t2_sub000\output\saved_models\trainSessionDm\deepMedic.trainSessionDm.final.2019-09-19.22.49.52.722093.model.ckpt
+2019-9-23 19:32:2.05: ~~~~~~~~~~~~~~~~~~~~INPUT~~~~~~~~~~~~~~~~
+2019-9-23 19:32:2.05: Number of cases to perform inference on = 1
+2019-9-23 19:32:2.06: Paths to the channels of each case = [['E:\\ashs_atlas_magdeburg_7t_20180416\\train\\train000\\tse_native_chunk_left_zscore.nii.gz']]
+2019-9-23 19:32:2.06: User provided Ground Truth labels for DSC calculation = True
+2019-9-23 19:32:2.06: Paths to the provided GT labels per case = ['E:\\ashs_atlas_magdeburg_7t_20180416\\train\\train000\\tse_native_chunk_left_seg_rev.nii.gz']
+2019-9-23 19:32:2.07: User provided Region-Of-Interest Masks for faster inference = False
+2019-9-23 19:32:2.07: Filepaths of the ROI Masks provided per case = None
+2019-9-23 19:32:2.07: >>> WARN: Inference will be performed on whole scan. Consider providing a ROI image for faster results, if possible!
+2019-9-23 19:32:2.08: ~~~~~~~~~~~~~~~~~~~OUTPUT~~~~~~~~~~~~~~~
+2019-9-23 19:32:2.08: Path to the main output-folder = E:\ashs_atlas_umcutrecht_7t_20170810\deepmedic\example_sevenT_magdeburg_beta1t2_sub000\output
+2019-9-23 19:32:2.08: Provided names to use to save results for each case = ['train000_tse_native_chunk_left_pred.nii.gz']
+2019-9-23 19:32:2.09: ~~~~~~~Ouput-parameters for Predictions (segmentation and probability maps)~~~~
+2019-9-23 19:32:2.09: Save the predicted segmentation = True
+2019-9-23 19:32:2.09: Save the probability maps = [True, True, True, True, True, True, True, True, True, True, True, True]
+2019-9-23 19:32:2.10: Paths where to save predictions per case = ['E:\\ashs_atlas_umcutrecht_7t_20170810\\deepmedic\\example_sevenT_magdeburg_beta1t2_sub000\\output/predictions/testSessionDm/predictions//train000_tse_native_chunk_left_pred.nii.gz']
+2019-9-23 19:32:2.10: Suffixes with which to save segmentations and probability maps = {'segm': 'Segm', 'prob': 'ProbMapClass'}
+2019-9-23 19:32:2.10: ~~~~~~~Ouput-parameters for Feature Maps (FMs)~~~~~~
+2019-9-23 19:32:2.11: Save FMs in individual images = False
+2019-9-23 19:32:2.11: Save all requested FMs in one 4D image = False
+2019-9-23 19:32:2.11: Indices of min/max FMs to save, per type of pathway (normal/subsampled/FC) and per layer = None
+2019-9-23 19:32:2.12: Save Feature Maps at = ['E:\\ashs_atlas_umcutrecht_7t_20170810\\deepmedic\\example_sevenT_magdeburg_beta1t2_sub000\\output/predictions/testSessionDm/features//train000_tse_native_chunk_left_pred.nii.gz']
+2019-9-23 19:32:2.12: ~~~~~~~ Parameters for Preprocessing ~~~~~~
+2019-9-23 19:32:2.13: Pad Input Images = True
+2019-9-23 19:32:2.13: ========== Done with printing session's parameters ==========
+2019-9-23 19:32:2.13: =============================================================
+
+2019-9-23 19:32:2.14: =======================================================
+
+2019-9-23 19:32:2.15: =========== Making the CNN graph... ===============
+2019-9-23 19:32:2.16: ...Building the CNN model...
+2019-9-23 19:32:2.17: [Pathway_NORMAL] is being built...
+2019-9-23 19:32:2.17: 	[Pathway_NORMAL]: Input's Shape: (Train) [5, 1, 37, 37, 37], (Val) [48, 1, 21, 21, 21], (Test) [10, 1, 45, 45, 45]
+2019-9-23 19:32:2.17: 	[Conv.Layer_0], Filter Shape: [30, 1, 3, 3, 3]
+2019-9-23 19:32:2.18: 	[Conv.Layer_0], Input's Shape: (Train) [5, 1, 37, 37, 37], (Val) [48, 1, 21, 21, 21], (Test) [10, 1, 45, 45, 45]
+2019-9-23 19:32:2.20: 	[Conv.Layer_1], Filter Shape: [30, 30, 3, 3, 3]
+2019-9-23 19:32:2.21: 	[Conv.Layer_1], Input's Shape: (Train) [5, 30, 35, 35, 35], (Val) [48, 30, 19, 19, 19], (Test) [10, 30, 43, 43, 43]
+2019-9-23 19:32:2.29: 	[Conv.Layer_2], Filter Shape: [40, 30, 3, 3, 3]
+2019-9-23 19:32:2.29: 	[Conv.Layer_2], Input's Shape: (Train) [5, 30, 33, 33, 33], (Val) [48, 30, 17, 17, 17], (Test) [10, 30, 41, 41, 41]
+2019-9-23 19:32:2.41: 	[Conv.Layer_3], Filter Shape: [40, 40, 3, 3, 3]
+2019-9-23 19:32:2.42: 	[Conv.Layer_3], Input's Shape: (Train) [5, 40, 31, 31, 31], (Val) [48, 40, 15, 15, 15], (Test) [10, 40, 39, 39, 39]
+2019-9-23 19:32:2.50: 	[Pathway_NORMAL]: making Residual Connection between output of [Layer_3] to input of previous layer.
+2019-9-23 19:32:2.58: 	[Conv.Layer_4], Filter Shape: [40, 40, 3, 3, 3]
+2019-9-23 19:32:2.59: 	[Conv.Layer_4], Input's Shape: (Train) [5, 40, 29, 29, 29], (Val) [48, 40, 13, 13, 13], (Test) [10, 40, 37, 37, 37]
+2019-9-23 19:32:2.71: 	[Conv.Layer_5], Filter Shape: [40, 40, 3, 3, 3]
+2019-9-23 19:32:2.72: 	[Conv.Layer_5], Input's Shape: (Train) [5, 40, 27, 27, 27], (Val) [48, 40, 11, 11, 11], (Test) [10, 40, 35, 35, 35]
+2019-9-23 19:32:2.80: 	[Pathway_NORMAL]: making Residual Connection between output of [Layer_5] to input of previous layer.
+2019-9-23 19:32:2.87: 	[Conv.Layer_6], Filter Shape: [50, 40, 3, 3, 3]
+2019-9-23 19:32:2.88: 	[Conv.Layer_6], Input's Shape: (Train) [5, 40, 25, 25, 25], (Val) [48, 40, 9, 9, 9], (Test) [10, 40, 33, 33, 33]
+2019-9-23 19:32:2.99: 	[Conv.Layer_7], Filter Shape: [50, 50, 3, 3, 3]
+2019-9-23 19:32:3.00: 	[Conv.Layer_7], Input's Shape: (Train) [5, 50, 23, 23, 23], (Val) [48, 50, 7, 7, 7], (Test) [10, 50, 31, 31, 31]
+2019-9-23 19:32:3.08: 	[Pathway_NORMAL]: making Residual Connection between output of [Layer_7] to input of previous layer.
+2019-9-23 19:32:3.15: 	[Pathway_NORMAL]: Output's Shape: (Train) [5, 50, 21, 21, 21], (Val) [48, 50, 5, 5, 5], (Test) [10, 50, 29, 29, 29]
+2019-9-23 19:32:3.16: [Pathway_NORMAL] done.
+2019-9-23 19:32:3.16: [Pathway_SUBSAMPLED[3, 3, 3]] is being built...
+2019-9-23 19:32:3.17: 	[Pathway_SUBSAMPLED[3, 3, 3]]: Input's Shape: (Train) [5, 1, 23, 23, 23], (Val) [48, 1, 18, 18, 18], (Test) [10, 1, 26, 26, 26]
+2019-9-23 19:32:3.17: 	[Conv.Layer_0], Filter Shape: [30, 1, 3, 3, 3]
+2019-9-23 19:32:3.18: 	[Conv.Layer_0], Input's Shape: (Train) [5, 1, 23, 23, 23], (Val) [48, 1, 18, 18, 18], (Test) [10, 1, 26, 26, 26]
+2019-9-23 19:32:3.20: 	[Conv.Layer_1], Filter Shape: [30, 30, 3, 3, 3]
+2019-9-23 19:32:3.20: 	[Conv.Layer_1], Input's Shape: (Train) [5, 30, 21, 21, 21], (Val) [48, 30, 16, 16, 16], (Test) [10, 30, 24, 24, 24]
+2019-9-23 19:32:3.28: 	[Conv.Layer_2], Filter Shape: [40, 30, 3, 3, 3]
+2019-9-23 19:32:3.28: 	[Conv.Layer_2], Input's Shape: (Train) [5, 30, 19, 19, 19], (Val) [48, 30, 14, 14, 14], (Test) [10, 30, 22, 22, 22]
+2019-9-23 19:32:3.40: 	[Conv.Layer_3], Filter Shape: [40, 40, 3, 3, 3]
+2019-9-23 19:32:3.40: 	[Conv.Layer_3], Input's Shape: (Train) [5, 40, 17, 17, 17], (Val) [48, 40, 12, 12, 12], (Test) [10, 40, 20, 20, 20]
+2019-9-23 19:32:3.48: 	[Pathway_SUBSAMPLED[3, 3, 3]]: making Residual Connection between output of [Layer_3] to input of previous layer.
+2019-9-23 19:32:3.60: 	[Conv.Layer_4], Filter Shape: [40, 40, 3, 3, 3]
+2019-9-23 19:32:3.61: 	[Conv.Layer_4], Input's Shape: (Train) [5, 40, 15, 15, 15], (Val) [48, 40, 10, 10, 10], (Test) [10, 40, 18, 18, 18]
+2019-9-23 19:32:3.72: 	[Conv.Layer_5], Filter Shape: [40, 40, 3, 3, 3]
+2019-9-23 19:32:3.73: 	[Conv.Layer_5], Input's Shape: (Train) [5, 40, 13, 13, 13], (Val) [48, 40, 8, 8, 8], (Test) [10, 40, 16, 16, 16]
+2019-9-23 19:32:3.81: 	[Pathway_SUBSAMPLED[3, 3, 3]]: making Residual Connection between output of [Layer_5] to input of previous layer.
+2019-9-23 19:32:3.88: 	[Conv.Layer_6], Filter Shape: [50, 40, 3, 3, 3]
+2019-9-23 19:32:3.89: 	[Conv.Layer_6], Input's Shape: (Train) [5, 40, 11, 11, 11], (Val) [48, 40, 6, 6, 6], (Test) [10, 40, 14, 14, 14]
+2019-9-23 19:32:4.01: 	[Conv.Layer_7], Filter Shape: [50, 50, 3, 3, 3]
+2019-9-23 19:32:4.02: 	[Conv.Layer_7], Input's Shape: (Train) [5, 50, 9, 9, 9], (Val) [48, 50, 4, 4, 4], (Test) [10, 50, 12, 12, 12]
+2019-9-23 19:32:4.10: 	[Pathway_SUBSAMPLED[3, 3, 3]]: making Residual Connection between output of [Layer_7] to input of previous layer.
+2019-9-23 19:32:4.18: 	[Pathway_SUBSAMPLED[3, 3, 3]]: Output's Shape: (Train) [5, 50, 7, 7, 7], (Val) [48, 50, 2, 2, 2], (Test) [10, 50, 10, 10, 10]
+2019-9-23 19:32:4.19: [Pathway_SUBSAMPLED[3, 3, 3]] done.
+2019-9-23 19:32:4.22: [Pathway_SUBSAMPLED[5, 5, 5]] is being built...
+2019-9-23 19:32:4.22: 	[Pathway_SUBSAMPLED[5, 5, 5]]: Input's Shape: (Train) [5, 1, 21, 21, 21], (Val) [48, 1, 17, 17, 17], (Test) [10, 1, 22, 22, 22]
+2019-9-23 19:32:4.23: 	[Conv.Layer_0], Filter Shape: [30, 1, 3, 3, 3]
+2019-9-23 19:32:4.23: 	[Conv.Layer_0], Input's Shape: (Train) [5, 1, 21, 21, 21], (Val) [48, 1, 17, 17, 17], (Test) [10, 1, 22, 22, 22]
+2019-9-23 19:32:4.25: 	[Conv.Layer_1], Filter Shape: [30, 30, 3, 3, 3]
+2019-9-23 19:32:4.25: 	[Conv.Layer_1], Input's Shape: (Train) [5, 30, 19, 19, 19], (Val) [48, 30, 15, 15, 15], (Test) [10, 30, 20, 20, 20]
+2019-9-23 19:32:4.33: 	[Conv.Layer_2], Filter Shape: [40, 30, 3, 3, 3]
+2019-9-23 19:32:4.34: 	[Conv.Layer_2], Input's Shape: (Train) [5, 30, 17, 17, 17], (Val) [48, 30, 13, 13, 13], (Test) [10, 30, 18, 18, 18]
+2019-9-23 19:32:4.45: 	[Conv.Layer_3], Filter Shape: [40, 40, 3, 3, 3]
+2019-9-23 19:32:4.46: 	[Conv.Layer_3], Input's Shape: (Train) [5, 40, 15, 15, 15], (Val) [48, 40, 11, 11, 11], (Test) [10, 40, 16, 16, 16]
+2019-9-23 19:32:4.54: 	[Pathway_SUBSAMPLED[5, 5, 5]]: making Residual Connection between output of [Layer_3] to input of previous layer.
+2019-9-23 19:32:4.62: 	[Conv.Layer_4], Filter Shape: [40, 40, 3, 3, 3]
+2019-9-23 19:32:4.62: 	[Conv.Layer_4], Input's Shape: (Train) [5, 40, 13, 13, 13], (Val) [48, 40, 9, 9, 9], (Test) [10, 40, 14, 14, 14]
+2019-9-23 19:32:4.75: 	[Conv.Layer_5], Filter Shape: [40, 40, 3, 3, 3]
+2019-9-23 19:32:4.75: 	[Conv.Layer_5], Input's Shape: (Train) [5, 40, 11, 11, 11], (Val) [48, 40, 7, 7, 7], (Test) [10, 40, 12, 12, 12]
+2019-9-23 19:32:4.83: 	[Pathway_SUBSAMPLED[5, 5, 5]]: making Residual Connection between output of [Layer_5] to input of previous layer.
+2019-9-23 19:32:4.91: 	[Conv.Layer_6], Filter Shape: [50, 40, 3, 3, 3]
+2019-9-23 19:32:4.92: 	[Conv.Layer_6], Input's Shape: (Train) [5, 40, 9, 9, 9], (Val) [48, 40, 5, 5, 5], (Test) [10, 40, 10, 10, 10]
+2019-9-23 19:32:5.05: 	[Conv.Layer_7], Filter Shape: [50, 50, 3, 3, 3]
+2019-9-23 19:32:5.05: 	[Conv.Layer_7], Input's Shape: (Train) [5, 50, 7, 7, 7], (Val) [48, 50, 3, 3, 3], (Test) [10, 50, 8, 8, 8]
+2019-9-23 19:32:5.13: 	[Pathway_SUBSAMPLED[5, 5, 5]]: making Residual Connection between output of [Layer_7] to input of previous layer.
+2019-9-23 19:32:5.27: 	[Pathway_SUBSAMPLED[5, 5, 5]]: Output's Shape: (Train) [5, 50, 5, 5, 5], (Val) [48, 50, 1, 1, 1], (Test) [10, 50, 6, 6, 6]
+2019-9-23 19:32:5.28: [Pathway_SUBSAMPLED[5, 5, 5]] done.
+2019-9-23 19:32:5.32: DEBUG: Shape of the kernel of the first FC layer is : [3, 3, 3]
+2019-9-23 19:32:5.33: DEBUG: Input to the FC Pathway will be padded by that many voxels per dimension: [2, 2, 2]
+2019-9-23 19:32:5.39: [Pathway_FC] is being built...
+2019-9-23 19:32:5.39: 	[Pathway_FC]: Input's Shape: (Train) [5, 150, 23, 23, 23], (Val) [48, 150, 7, 7, 7], (Test) [10, 150, 31, 31, 31]
+2019-9-23 19:32:5.40: 	[Conv.Layer_0], Filter Shape: [250, 150, 3, 3, 3]
+2019-9-23 19:32:5.40: 	[Conv.Layer_0], Input's Shape: (Train) [5, 150, 23, 23, 23], (Val) [48, 150, 7, 7, 7], (Test) [10, 150, 31, 31, 31]
+2019-9-23 19:32:5.57: 	[Conv.Layer_1], Filter Shape: [250, 250, 1, 1, 1]
+2019-9-23 19:32:5.57: 	[Conv.Layer_1], Input's Shape: (Train) [5, 250, 21, 21, 21], (Val) [48, 250, 5, 5, 5], (Test) [10, 250, 29, 29, 29]
+2019-9-23 19:32:5.66: 	[Pathway_FC]: making Residual Connection between output of [Layer_1] to input of previous layer.
+2019-9-23 19:32:5.76: 	[Conv.Layer_2], Filter Shape: [12, 250, 1, 1, 1]
+2019-9-23 19:32:5.77: 	[Conv.Layer_2], Input's Shape: (Train) [5, 250, 21, 21, 21], (Val) [48, 250, 5, 5, 5], (Test) [10, 250, 29, 29, 29]
+2019-9-23 19:32:5.85: 	[Pathway_FC]: Output's Shape: (Train) [5, 12, 21, 21, 21], (Val) [48, 12, 5, 5, 5], (Test) [10, 12, 29, 29, 29]
+2019-9-23 19:32:5.85: [Pathway_FC] done.
+2019-9-23 19:32:5.86: Adding the final Softmax Target layer...
+2019-9-23 19:32:5.89: Finished building the CNN's model.
+2019-9-23 19:32:5.89: =========== Compiling the Testing Function ============
+2019-9-23 19:32:5.89: =======================================================
+
+2019-9-23 19:32:5.90: ...Building the function for testing and visualisation of FMs...
+2019-9-23 19:32:5.90: ...Collecting ops and feeds for testing...
+2019-9-23 19:32:5.90: Done.
+2019-9-23 19:32:6.08: =========== Loading parameters from specified saved model ===============
+2019-9-23 19:32:6.09: Loading parameters from:E:\ashs_atlas_umcutrecht_7t_20170810\deepmedic\example_sevenT_magdeburg_beta1t2_sub000\output\saved_models\trainSessionDm\deepMedic.trainSessionDm.final.2019-09-19.22.49.52.722093.model.ckpt
+2019-9-23 19:32:6.45: Parameters were loaded.
+2019-9-23 19:32:6.46: 
+2019-9-23 19:32:6.46: ======================================================
+2019-9-23 19:32:6.46: =========== Testing with the CNN model ===============
+2019-9-23 19:32:6.47: ======================================================
+
+2019-9-23 19:32:6.47: ###########################################################################################################
+2019-9-23 19:32:6.48: ############################# Starting full Segmentation of Testing subjects ##########################
+2019-9-23 19:32:6.48: ###########################################################################################################
+2019-9-23 19:32:6.48: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2019-9-23 19:32:6.49: ~~~~~~~~~~~~~~~~~~~~ Segmenting subject with index #0 ~~~~~~~~~~~~~~~~~~~~
+2019-9-23 19:32:6.49: Loading subject with 1st channel at: E:\ashs_atlas_magdeburg_7t_20180416\train\train000\tse_native_chunk_left_zscore.nii.gz
+2019-9-23 19:32:6.57: Starting to (tile) extract Segments from the images of the subject for Segmentation...
+2019-9-23 19:32:6.59: Finished (tiling) extracting Segments from the images of the subject for Segmentation.
+2019-9-23 19:32:6.59: Starting to segment each image-part by calling the cnn.cnnTestModel(i). This part takes a few mins per volume...
+2019-9-23 19:32:6.59: Total number of Segments to process:40
+2019-9-23 19:32:6.60: Processed 10/40 segments.
+2019-9-23 19:32:24.49: Processed 20/40 segments.
+2019-9-23 19:32:40.75: Processed 30/40 segments.
+2019-9-23 19:32:57.17: Processed 40/40 segments.
+2019-9-23 19:33:13.54: TIMING: Segmentation of subject: [Extracting:] 0.01 [Loading:] 0.01 [ForwardPass:] 66.87 [Total:] 66.89 secs.
+2019-9-23 19:33:13.61: Saving the new label (segmentation) image for the subject #0
+2019-9-23 19:33:13.63: Image saved at: E:\ashs_atlas_umcutrecht_7t_20170810\deepmedic\example_sevenT_magdeburg_beta1t2_sub000\output\predictions\testSessionDm\predictions\train000_tse_native_chunk_left_pred_Segm.nii.gz
+2019-9-23 19:33:13.63: Saving the new label (segmentation) image for the subject #0
+2019-9-23 19:33:13.69: Image saved at: E:\ashs_atlas_umcutrecht_7t_20170810\deepmedic\example_sevenT_magdeburg_beta1t2_sub000\output\predictions\testSessionDm\predictions\train000_tse_native_chunk_left_pred_ProbMapClass0.nii.gz
+2019-9-23 19:33:13.69: Saving the new label (segmentation) image for the subject #0
+2019-9-23 19:33:13.80: Image saved at: E:\ashs_atlas_umcutrecht_7t_20170810\deepmedic\example_sevenT_magdeburg_beta1t2_sub000\output\predictions\testSessionDm\predictions\train000_tse_native_chunk_left_pred_ProbMapClass1.nii.gz
+2019-9-23 19:33:13.80: Saving the new label (segmentation) image for the subject #0
+2019-9-23 19:33:13.91: Image saved at: E:\ashs_atlas_umcutrecht_7t_20170810\deepmedic\example_sevenT_magdeburg_beta1t2_sub000\output\predictions\testSessionDm\predictions\train000_tse_native_chunk_left_pred_ProbMapClass2.nii.gz
+2019-9-23 19:33:13.92: Saving the new label (segmentation) image for the subject #0
+2019-9-23 19:33:14.03: Image saved at: E:\ashs_atlas_umcutrecht_7t_20170810\deepmedic\example_sevenT_magdeburg_beta1t2_sub000\output\predictions\testSessionDm\predictions\train000_tse_native_chunk_left_pred_ProbMapClass3.nii.gz
+2019-9-23 19:33:14.04: Saving the new label (segmentation) image for the subject #0
+2019-9-23 19:33:14.14: Image saved at: E:\ashs_atlas_umcutrecht_7t_20170810\deepmedic\example_sevenT_magdeburg_beta1t2_sub000\output\predictions\testSessionDm\predictions\train000_tse_native_chunk_left_pred_ProbMapClass4.nii.gz
+2019-9-23 19:33:14.15: Saving the new label (segmentation) image for the subject #0
+2019-9-23 19:33:14.26: Image saved at: E:\ashs_atlas_umcutrecht_7t_20170810\deepmedic\example_sevenT_magdeburg_beta1t2_sub000\output\predictions\testSessionDm\predictions\train000_tse_native_chunk_left_pred_ProbMapClass5.nii.gz
+2019-9-23 19:33:14.26: Saving the new label (segmentation) image for the subject #0
+2019-9-23 19:33:14.36: Image saved at: E:\ashs_atlas_umcutrecht_7t_20170810\deepmedic\example_sevenT_magdeburg_beta1t2_sub000\output\predictions\testSessionDm\predictions\train000_tse_native_chunk_left_pred_ProbMapClass6.nii.gz
+2019-9-23 19:33:14.37: Saving the new label (segmentation) image for the subject #0
+2019-9-23 19:33:14.48: Image saved at: E:\ashs_atlas_umcutrecht_7t_20170810\deepmedic\example_sevenT_magdeburg_beta1t2_sub000\output\predictions\testSessionDm\predictions\train000_tse_native_chunk_left_pred_ProbMapClass7.nii.gz
+2019-9-23 19:33:14.48: Saving the new label (segmentation) image for the subject #0
+2019-9-23 19:33:14.60: Image saved at: E:\ashs_atlas_umcutrecht_7t_20170810\deepmedic\example_sevenT_magdeburg_beta1t2_sub000\output\predictions\testSessionDm\predictions\train000_tse_native_chunk_left_pred_ProbMapClass8.nii.gz
+2019-9-23 19:33:14.61: Saving the new label (segmentation) image for the subject #0
+2019-9-23 19:33:14.72: Image saved at: E:\ashs_atlas_umcutrecht_7t_20170810\deepmedic\example_sevenT_magdeburg_beta1t2_sub000\output\predictions\testSessionDm\predictions\train000_tse_native_chunk_left_pred_ProbMapClass9.nii.gz
+2019-9-23 19:33:14.73: Saving the new label (segmentation) image for the subject #0
+2019-9-23 19:33:14.85: Image saved at: E:\ashs_atlas_umcutrecht_7t_20170810\deepmedic\example_sevenT_magdeburg_beta1t2_sub000\output\predictions\testSessionDm\predictions\train000_tse_native_chunk_left_pred_ProbMapClass10.nii.gz
+2019-9-23 19:33:14.85: Saving the new label (segmentation) image for the subject #0
+2019-9-23 19:33:14.96: Image saved at: E:\ashs_atlas_umcutrecht_7t_20170810\deepmedic\example_sevenT_magdeburg_beta1t2_sub000\output\predictions\testSessionDm\predictions\train000_tse_native_chunk_left_pred_ProbMapClass11.nii.gz
+2019-9-23 19:33:14.97: +++++++++++++++++++++ Reporting Segmentation Metrics for the subject #0 ++++++++++++++++++++++++++
+2019-9-23 19:33:15.13: ACCURACY: (Testing) The Per-Class DICE Coefficients for subject with index #0 equal: DICE1=[ 0.9008 0.8569 0.7880 0.8578 0.7812 0.8539 0.8639 0.8361 0.7610 0.8300 0.8721 0.5994 ] DICE2=[ 0.9008 0.8569 0.7880 0.8578 0.7812 0.8539 0.8639 0.8361 0.7610 0.8300 0.8721 0.5994 ] DICE3=[ 0.9008 0.8569 0.7880 0.8578 0.7812 0.8539 0.8639 0.8361 0.7610 0.8300 0.8721 0.5994 ]
+2019-9-23 19:33:15.13: EXPLANATION: DICE1/2/3 are lists with the DICE per class. For Class-0, we calculate DICE for whole foreground, i.e all labels merged, except the background label=0. Useful for multi-class problems.
+2019-9-23 19:33:15.14: EXPLANATION: DICE1 is calculated as segmentation over whole volume VS whole Ground Truth (GT). DICE2 is the segmentation within the ROI vs GT. DICE3 is segmentation within the ROI vs the GT within the ROI.
+2019-9-23 19:33:15.14: EXPLANATION: If an ROI mask has been provided, you should be consulting DICE2 or DICE3.
+2019-9-23 19:33:15.15: +++++++++++++++++++++++++++++++ Segmentation of all subjects finished +++++++++++++++++++++++++++++++++++
+2019-9-23 19:33:15.15: +++++++++++++++++++++ Reporting Average Segmentation Metrics over all subjects ++++++++++++++++++++++++++
+2019-9-23 19:33:15.15: ACCURACY: (Testing) The Per-Class average DICE Coefficients over all subjects are: DICE1=[ 0.9008 0.8569 0.7880 0.8578 0.7812 0.8539 0.8639 0.8361 0.7610 0.8300 0.8721 0.5994 ] DICE2=[ 0.9008 0.8569 0.7880 0.8578 0.7812 0.8539 0.8639 0.8361 0.7610 0.8300 0.8721 0.5994 ] DICE3=[ 0.9008 0.8569 0.7880 0.8578 0.7812 0.8539 0.8639 0.8361 0.7610 0.8300 0.8721 0.5994 ]
+2019-9-23 19:33:15.16: EXPLANATION: DICE1/2/3 are lists with the DICE per class. For Class-0, we calculate DICE for whole foreground, i.e all labels merged, except the background label=0. Useful for multi-class problems.
+2019-9-23 19:33:15.16: EXPLANATION: DICE1 is calculated as segmentation over whole volume VS whole Ground Truth (GT). DICE2 is the segmentation within the ROI vs GT. DICE3 is segmentation within the ROI vs the GT within the ROI.
+2019-9-23 19:33:15.16: EXPLANATION: If an ROI mask has been provided, you should be consulting DICE2 or DICE3.
+2019-9-23 19:33:15.16: TIMING: Testing process lasted: 68.68 secs.
+2019-9-23 19:33:15.17: ###########################################################################################################
+2019-9-23 19:33:15.17: ############################# Finished full Segmentation of Testing subjects ##########################
+2019-9-23 19:33:15.18: ###########################################################################################################
+2019-9-23 19:33:15.24: 
+2019-9-23 19:33:15.24: ======================================================
+2019-9-23 19:33:15.25: =========== Testing session finished =================
+2019-9-23 19:33:15.25: ======================================================
+2019-9-23 19:33:15.26: Finished.

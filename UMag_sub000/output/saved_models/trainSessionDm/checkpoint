@@ -1,0 +1,6 @@
+model_checkpoint_path: "E:\\ashs_atlas_umcutrecht_7t_20170810\\deepmedic\\example_sevenT_magdeburg_beta1t2_sub000\\output/saved_models//trainSessionDm//deepMedic.trainSessionDm.final.2019-09-19.22.49.52.722093.model.ckpt"
+all_model_checkpoint_paths: "E:\\ashs_atlas_umcutrecht_7t_20170810\\deepmedic\\example_sevenT_magdeburg_beta1t2_sub000\\output/saved_models//trainSessionDm//deepMedic.trainSessionDm.2019-09-19.18.36.11.692919.model.ckpt"
+all_model_checkpoint_paths: "E:\\ashs_atlas_umcutrecht_7t_20170810\\deepmedic\\example_sevenT_magdeburg_beta1t2_sub000\\output/saved_models//trainSessionDm//deepMedic.trainSessionDm.2019-09-19.20.00.36.159652.model.ckpt"
+all_model_checkpoint_paths: "E:\\ashs_atlas_umcutrecht_7t_20170810\\deepmedic\\example_sevenT_magdeburg_beta1t2_sub000\\output/saved_models//trainSessionDm//deepMedic.trainSessionDm.2019-09-19.21.25.04.381692.model.ckpt"
+all_model_checkpoint_paths: "E:\\ashs_atlas_umcutrecht_7t_20170810\\deepmedic\\example_sevenT_magdeburg_beta1t2_sub000\\output/saved_models//trainSessionDm//deepMedic.trainSessionDm.2019-09-19.22.49.37.902722.model.ckpt"
+all_model_checkpoint_paths: "E:\\ashs_atlas_umcutrecht_7t_20170810\\deepmedic\\example_sevenT_magdeburg_beta1t2_sub000\\output/saved_models//trainSessionDm//deepMedic.trainSessionDm.final.2019-09-19.22.49.52.722093.model.ckpt"
