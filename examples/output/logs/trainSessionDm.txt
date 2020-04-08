@@ -1,0 +1,5 @@
+2019-3-16 0:52:39.14: =============================== logger created =======================================
+2019-3-16 0:52:39.14: 
+2019-3-16 0:52:39.14: ======================== Starting new session ============================
+2019-3-16 0:52:39.15: Command line arguments given: 
+Namespace(device='cpu', model_cfg='./examples/configFiles/deepMedic/model/modelConfig.cfg', reset_trainer=False, saved_model=None, test_cfg=None, train_cfg='./examples/configFiles/deepMedic/train/trainConfig.cfg')

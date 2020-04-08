@@ -1,0 +1,5 @@
+model_checkpoint_path: "C:\\Anaconda3\\envs\\py36v2\\deepmedic\\examples\\output/saved_models//trainSessionWithValidTiny//tinyCnn.trainSessionWithValidTiny.final.2019-03-15.21.43.30.085572.model.ckpt"
+all_model_checkpoint_paths: "C:\\Anaconda3\\envs\\py36v2\\deepmedic\\examples\\output/saved_models//trainSessionWithValidTiny//tinyCnn.trainSessionWithValidTiny.initial.2019-03-15.21.39.36.477555.model.ckpt"
+all_model_checkpoint_paths: "C:\\Anaconda3\\envs\\py36v2\\deepmedic\\examples\\output/saved_models//trainSessionWithValidTiny//tinyCnn.trainSessionWithValidTiny.2019-03-15.21.40.58.777356.model.ckpt"
+all_model_checkpoint_paths: "C:\\Anaconda3\\envs\\py36v2\\deepmedic\\examples\\output/saved_models//trainSessionWithValidTiny//tinyCnn.trainSessionWithValidTiny.2019-03-15.21.42.52.541391.model.ckpt"
+all_model_checkpoint_paths: "C:\\Anaconda3\\envs\\py36v2\\deepmedic\\examples\\output/saved_models//trainSessionWithValidTiny//tinyCnn.trainSessionWithValidTiny.final.2019-03-15.21.43.30.085572.model.ckpt"
