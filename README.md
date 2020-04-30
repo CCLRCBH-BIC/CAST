@@ -5,7 +5,7 @@ CAST-multi-scale-CNN-for-segmentation-of-hippocamal-subfields
 ### 1. Required libraries
 - [Python](https://www.python.org/downloads/): Python 3 by default, the script is tested on Python 3.6.8.
 - [Tensorflow](https://www.https://www.tensorflow.org/): Version 1.10.0 is tested.
-- [deepmedic](https://github.com/pipiyang/deepmedic): The deepmedic is revised based on https://github.com/deepmedic/deepmedic.
+- [deepmedic](https://github.com/pipiyang/CAST/tree/master/deepmedic): The deepmedic is revised based on https://github.com/deepmedic/deepmedic.
 ### 2. Preprocessing
 * Affine transformation
 In the analysis, all subjects used for training and segmentation are required to roughly in the same space. If not, affine transformation should be used. We use ANTS (https://github.com/ANTsX/ANTs) for the purpose. Other softwares (e.g. FSL, SPM) can also be used.
