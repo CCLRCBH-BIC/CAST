@@ -8,7 +8,7 @@ CAST-multi-scale-CNN-for-segmentation-of-hippocamal-subfields
 - [deepmedic](https://github.com/pipiyang/deepmedic): The deepmedic is revised based on https://github.com/deepmedic/deepmedic. When we run the original code on a multiple GPU workstation, it will exhaust all the memories but without reducing computational time. I have modified the code to enable multiple GPUs train a model separately.
 ### 2. Preprocessing
 * Affine transformation
-In the analysis, all subjects used for training and segmentation are required to roughly in the same space. If not, affine transformation should be used. We use ANTS for the purpose. 
+In the analysis, all subjects used for training and segmentation are required to roughly in the same space. If not, affine transformation should be used. We use ANTS (https://github.com/ANTsX/ANTs) for the purpose. Other softwares (e.g. FSL, SPM) can also be used.
 ```cshell
 ANTS 3 –m MI[…,…,1,32] –i 0
 ```
@@ -69,3 +69,5 @@ or
   GPU (e.g. -dev cuda0) is not required for the segmentation pipeline. With GPU disabled, CAST segments a new subject in MNI dataset in one minute. With GPU enabled, CAT segments a new subject in MNI dataset in 10 seconds (for Tesla K40c GPU card). 
 ### 4. Postprocessing
 In case that the segmentation map is required to be transformed back to subject's native space (e.g. affine transformation is used as a preprocessing step), instead of directly transforming the hard threshold segmentation map. We suggest to transform the probabilistic map for each label and then select the label for each voxel as the label having the highest value in the transformed probabilistic maps. The script for this purpose is MNI_TransformProbMap.m under CAST/PreandPostProcess.
+### 5. Reference
+
