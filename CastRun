@@ -113,11 +113,12 @@ if __name__ == '__main__':
     cwd = os.getcwd()
     parser = setup_arg_parser()
     args = parser.parse_args()
-	if args.path_cfg :
-		args.model_cfg = args.path_cfg+"/configFiles/deepMedic/model/"+args.model_cfg
-		args.train_cfg = args.path_cfg+"/configFiles/deepMedic/train/"+args.model_cfg
-		args.test_cfg = args.path_cfg+"/configFiles/deepMedic/test/"+args.model_cfg
-		args.saved_model = args.path_cfg+"/output/saved_models/trainSessionDm/"+args.saved_model
+    if args.path_cfg:
+        print("path is changed")
+        args.model_cfg = args.path_cfg+"/configFiles/deepMedic/model/"+args.model_cfg
+        args.train_cfg = args.path_cfg+"/configFiles/deepMedic/train/"+args.model_cfg
+        args.test_cfg = args.path_cfg+"/configFiles/deepMedic/test/"+args.model_cfg
+        args.saved_model = args.path_cfg+"/output/saved_models/trainSessionDm/"+args.saved_model
     
     if len(sys.argv) == 1:
         print("For help on the usage of this program, please use the option -h."); exit(1)
