@@ -70,4 +70,4 @@ or
 ### 4. Postprocessing
 In case that the segmentation map is required to be transformed back to subject's native space (e.g. affine transformation is used as a preprocessing step), instead of directly transforming the hard threshold segmentation map. We suggest to transform the probabilistic map for each label and then select the label for each voxel as the label having the highest value in the transformed probabilistic maps. The script for this purpose is MNI_TransformProbMap.m under CAST/PreandPostProcess.
 ### 5. Reference
-
+Yang et al.(2020), CAST: A multi-scale convolutional neural network based automated hippocampal subfield segmentation toolbox. NeuroImage 218 116947. https://doi.org/10.1016/j.neuroimage.2020.116947.
